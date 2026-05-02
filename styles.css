@@ -61,4 +61,11 @@ button:hover{
     color: #333;
 }
 
+.footer{
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #2B2B2B;
+    color: #ffffff;
+}
 
