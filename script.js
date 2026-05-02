@@ -24,8 +24,19 @@ const days=["Sunday","Monday","Tuesday","Wednesday",
                  }
 
                  //Function to validate input
-                 
+                 function isValidDate(day,month,year){
+                    if(!day||!month||!year)return false;
+                    if(day<1||day>31)return false;
+                    if(month<1||month>12)return false;
+                    return true;
+                 }
 
+                 //main function(runs when form is submitted)
+                 function handleFormSubmit(event){
+                    event.preventdefault();
+                 }
+
+                 
 
 
 
