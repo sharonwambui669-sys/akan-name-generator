@@ -4,3 +4,12 @@ body{
     margin:0;
     padding:0;
 }
+
+.container{
+    width: 350px;
+    margin:60px auto;
+    background: #ffffff;
+    padding:20px 25px;
+    border-radius: 10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
