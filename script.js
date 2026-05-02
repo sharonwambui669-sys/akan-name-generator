@@ -36,7 +36,32 @@ const days=["Sunday","Monday","Tuesday","Wednesday",
                     event.preventdefault();
                  }
 
-                 
+                //Get values 
+                const day=
+                parseInt(document.getElementById("day")).value;
+                const month=
+                parseInt(document.getElementById("month")).value;
+                const year=
+                parseInt(document.getElementbyId("year")).value;
+                const gender=
+                document.getElementById("gender").value;
+
+                //validate
+                if(!isValidDate(day,month,year)||!gender){
+                    alert("Please enter valid details");
+                    return;
+                }
+
+                //process
+                const dayIndex=getDayofWeek(day,month,year);
+                const akanName=getAkanName(dayIndex,gender);
+
+                //output
+                document.getElementById("result").innerText=
+                'You were born on ${days[dayIndex]}.Your Akan name is ${akanName}.';
+            
+                //Event listener
+                document.getElementById("akanForm").addEventListener("submit",handleFormSubmit);
 
 
 
