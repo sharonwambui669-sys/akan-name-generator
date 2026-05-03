@@ -26,34 +26,35 @@ const days=["Sunday","Monday","Tuesday","Wednesday",
                  //Function to validate input
                  function isValidDate(day,month,year){
                     if(!day||!month||!year)return false;
+                    
                     if(day<1||day>31)return false;
                     if(month<1||month>12)return false;
                     return true;
                  }
 
-                 //main function(runs when form is submitted)
+                 //main function
                  function handleFormSubmit(event){
                     event.preventdefault();
                  }
 
                 //Get values 
                 const day=
-                parseInt(document.getElementById("day")).value;
+                parseInt(document.getElementById("day").value);
                 const month=
-                parseInt(document.getElementById("month")).value;
+                parseInt(document.getElementById("month").value);
                 const year=
-                parseInt(document.getElementbyId("year")).value;
+                parseInt(document.getElementbyId("year").value);
                 const gender=
                 document.getElementById("gender").value;
 
                 //validate
                 if(!isValidDate(day,month,year)||!gender){
                     alert("Please enter valid details");
-                    return;
                 }
 
                 //process
                 const dayIndex=getDayofWeek(day,month,year);
+                console.log("The day index is:",dayIndex);
                 const akanName=getAkanName(dayIndex,gender);
 
                 //output
