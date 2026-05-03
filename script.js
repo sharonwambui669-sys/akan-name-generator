@@ -11,6 +11,7 @@ const days=["Sunday","Monday","Tuesday","Wednesday",
             //function to get day of the week
             function getDayofWeek(day,month,year) {
                 const date=new Date(year,month -1,day);
+                
                 return date.getDate();//returns 0-6
             }
 
